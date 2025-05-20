@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router";
+import { RegularMemes } from "./Pages/RegularMemes";
+import { HotMemes } from "./Pages/HotMemes";
+import { PoczekalniaMemes } from "./Pages/PoczekalniaMemes";
+import { ErrorPage } from "./Pages/ErrorPage";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <main>
+          <Routes>
+            <Route path="/" element={<RegularMemes />}></Route>
+            <Route path="/hot" element={<HotMemes />}></Route>
+            <Route path="/poczekalnia" element={<PoczekalniaMemes />}></Route>
+            <Route path="/*" element={<ErrorPage />}></Route>
+          </Routes>
+        </main>
+      </BrowserRouter>
     </div>
   );
 }
