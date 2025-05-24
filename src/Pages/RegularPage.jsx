@@ -1,6 +1,6 @@
 import { MemeComponent } from "../Components/MemeComponent";
 
-export function RegularMemes() {
+export function RegularPage() {
     return (
         <MemeComponent />
     )
