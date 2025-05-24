@@ -3,12 +3,14 @@ import { RegularMemes } from "./Pages/RegularMemes";
 import { HotMemes } from "./Pages/HotMemes";
 import { PoczekalniaMemes } from "./Pages/PoczekalniaMemes";
 import { ErrorPage } from "./Pages/ErrorPage";
+import { Navigation } from "./Components/Navigation"
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Navigation />
         <main>
           <Routes>
             <Route path="/" element={<RegularMemes />}></Route>
