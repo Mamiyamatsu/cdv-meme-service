@@ -4,6 +4,7 @@ import { HotPage } from "./Pages/HotPage";
 import { WaitingRoomPage } from "./Pages/WaitingRoomPage";
 import { ErrorPage } from "./Pages/ErrorPage";
 import { Navigation } from "./Components/Navigation"
+import { AdsComponent } from "./Components/AdsComponent";
 import "./App.css";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/*" element={<ErrorPage />}></Route>
           </Routes>
         </main>
+        <AdsComponent/>
       </BrowserRouter>
     </div>
   );
