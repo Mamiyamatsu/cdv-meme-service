@@ -18,7 +18,7 @@ const memesArray = [
     },
     {
       title: "Programmers' priority",
-      upvotes: 9,
+      upvotes: 10,
       downvotes: 2,
       img: meme3,
     },
