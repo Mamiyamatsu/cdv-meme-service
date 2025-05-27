@@ -1,22 +1,9 @@
-import { useState } from "react";
-import MemesArray from "../MemesData/memesArray";
 import { UpvoteComponent } from "./UpvoteComponent";
 import { DownvoteComponent } from "./DownvoteComponent";
+import { useMemes } from "../Context/MemeContext";
 
 export function MemeComponent() {
-  const [memes, setMemes] = useState(MemesArray);
-
-  const handleUpvote = (index) => {
-    const updated = [...memes];
-    updated[index].upvotes += 1;
-    setMemes(updated);
-  };
-
-  const handleDownvote = (index) => {
-    const updated = [...memes];
-    updated[index].downvotes += 1;
-    setMemes(updated);
-  };
+  const { memes, handleUpvote, handleDownvote } = useMemes();
 
   return (
     <div>
