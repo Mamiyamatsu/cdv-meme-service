@@ -7,6 +7,8 @@ import { ErrorPage } from "./Pages/ErrorPage";
 import { Navigation } from "./Components/Navigation";
 import { AdsComponent } from "./Components/AdsComponent";
 import "./App.css";
+import { FavouritesPage } from "./Pages/FavouritesPage";
+import { FavouritesBar } from "./Components/FavouritesBar";
 
 function App() {
   return (
@@ -19,10 +21,12 @@ function App() {
               <Route path="/" element={<RegularPage />}></Route>
               <Route path="/hot" element={<HotPage />}></Route>
               <Route path="/poczekalnia" element={<WaitingRoomPage />}></Route>
+              <Route path="/favourites" element={<FavouritesPage />}></Route>
               <Route path="/*" element={<ErrorPage />}></Route>
             </Routes>
           </main>
           <AdsComponent />
+          <FavouritesBar />
         </BrowserRouter>
       </MemeProvider>
     </div>

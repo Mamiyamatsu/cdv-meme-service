@@ -9,24 +9,28 @@ const memesArray = [
       upvotes: 4,
       downvotes: 0,
       img: meme1,
+      isFavourite: false,
     },
     {
       title: "Feelings of power",
       upvotes: 3,
       downvotes: 1,
       img: meme2,
+      isFavourite: false,
     },
     {
       title: "Programmers' priority",
       upvotes: 10,
       downvotes: 2,
       img: meme3,
+      isFavourite: false,
     },
     {
       title: "Happy coding!",
       upvotes: 12,
       downvotes: 3,
       img: meme4,
+      isFavourite: false,
     },
     // tu będą kolejne memy
   ];
