@@ -6,6 +6,12 @@ const MemeContext = createContext();
 export function MemeProvider({ children }) {
   const [memes, setMemes] = useState(memesArray);
 
+  const toggleFavourite = (index) => {
+    const updated = [...memes];
+    updated[index].isFavourite = !updated[index].isFavourite;
+    setMemes(updated);
+  };
+
   const handleUpvote = (index) => {
     const updated = [...memes];
     updated[index].upvotes += 1;
@@ -19,7 +25,7 @@ export function MemeProvider({ children }) {
   };
 
   return (
-    <MemeContext.Provider value={{ memes, handleUpvote, handleDownvote }}>
+    <MemeContext.Provider value={{ memes, toggleFavourite, handleUpvote, handleDownvote }}>
       {children}
     </MemeContext.Provider>
   );
