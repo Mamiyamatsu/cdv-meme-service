@@ -1,9 +1,11 @@
 import { useMemes } from "../Context/MemeContext";
 import { UpvoteComponent } from "../Components/UpvoteComponent";
 import { DownvoteComponent } from "../Components/DownvoteComponent";
+import { FavouritesComponent } from "../Components/FavouritesComponent";
+import "../Styles/Main.css";
 
 export function HotPage() {
-  const { memes, handleUpvote, handleDownvote } = useMemes();
+  const { memes, handleUpvote, handleDownvote, toggleFavourite } = useMemes();
 
   const hotMemes = memes.filter((meme) => meme.upvotes >= 10);
 
@@ -17,14 +19,26 @@ export function HotPage() {
           <div key={index} className="meme">
             <h2>{meme.title}</h2>
             <img src={meme.img} alt={meme.title} />
-            <UpvoteComponent
-              count={meme.upvotes}
-              onClick={() => handleUpvote(index)}
-            />
-            <DownvoteComponent
-              count={meme.downvotes}
-              onClick={() => handleDownvote(index)}
-            />
+            <div className="buttons">
+              <div>
+                <UpvoteComponent
+                  count={meme.upvotes}
+                  onClick={() => handleUpvote(index)}
+                />
+              </div>
+              <div>
+                <DownvoteComponent
+                  count={meme.downvotes}
+                  onClick={() => handleDownvote(index)}
+                />
+              </div>
+              <div>
+                <FavouritesComponent
+                  isFavourite={meme.isFavourite}
+                  onClick={() => toggleFavourite(index)}
+                />
+              </div>
+            </div>
           </div>
         ))
       )}

@@ -1,4 +1,5 @@
 import adsArray from "../AdsData/adsArray"
+import "../Styles/Aside.css"
 
 export function AdsComponent() {
     return (
