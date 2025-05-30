@@ -16,7 +16,8 @@ function App() {
       <MemeProvider>
         <BrowserRouter>
           <Navigation />
-          <main>
+          <div className="container">
+          <main className="main">
             <Routes>
               <Route path="/" element={<RegularPage />}></Route>
               <Route path="/hot" element={<HotPage />}></Route>
@@ -25,8 +26,11 @@ function App() {
               <Route path="/*" element={<ErrorPage />}></Route>
             </Routes>
           </main>
-          <AdsComponent />
-          <FavouritesBar />
+          <aside className="aside">
+            <FavouritesBar />
+            <AdsComponent />
+          </aside>
+          </div>
         </BrowserRouter>
       </MemeProvider>
     </div>

@@ -7,8 +7,12 @@ export function FavouritesComponent({ isFavourite, onClick }) {
       className="btn"
       title={isFavourite ? "Remove from favourites" : "Add to favourites"}
     >
-      <Star fill={isFavourite ? "currentColor" : "none"} />
-      <span>{isFavourite ? "Favourites" : "Add"}</span>
+      <Star
+        size={20}
+        fill={isFavourite ? "gold" : "none"}
+        stroke={isFavourite ? "gold" : "black"}
+      />
+      <span>{isFavourite ? "Favourite" : "Add"}</span>
     </button>
   );
 }

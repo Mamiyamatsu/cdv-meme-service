@@ -1,4 +1,5 @@
 import { ThumbsUp } from "lucide-react";
+import "../Styles/Main.css"
 
 export function UpvoteComponent({ count, onClick }) {
   return (

@@ -1,0 +1,29 @@
+.main {
+    box-sizing: border-box;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+
+.main img {
+    max-width: 90%;
+    height: auto;
+    border: solid 2px black;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 80px;
+    height: 40px;
+    margin-right: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
+    color: black;
+}

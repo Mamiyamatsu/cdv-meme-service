@@ -1,4 +1,5 @@
 import { useMemes } from "../Context/MemeContext";
+import "../Styles/Aside.css"
 
 export function FavouritesBar() {
   const { memes } = useMemes();
