@@ -1,11 +1,9 @@
 import { UpvoteComponent } from "./UpvoteComponent";
 import { DownvoteComponent } from "./DownvoteComponent";
-import { useMemes } from "../Context/MemeContext";
 import { FavouritesComponent } from "./FavouritesComponent";
 import "../Styles/Main.css";
 
-export function MemeComponent() {
-  const { memes, handleUpvote, handleDownvote, toggleFavourite } = useMemes();
+export function MemeComponent({ memes, handleUpvote, handleDownvote, toggleFavourite }) {
 
   return (
     <div>
