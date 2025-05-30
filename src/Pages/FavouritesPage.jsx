@@ -1,8 +1,9 @@
 import { useMemes } from "../Context/MemeContext";
+import { MemeComponent } from "../Components/MemeComponent";
 
 export function FavouritesPage() {
-  const { memes } = useMemes();
-  const favouriteMemes = memes.filter((m) => m.isFavourite);
+  const { memes, handleUpvote, handleDownvote, toggleFavourite } = useMemes();
+  const favouriteMemes = memes.filter((meme) => meme.isFavourite);
 
   return (
     <div>
@@ -10,12 +11,14 @@ export function FavouritesPage() {
       {favouriteMemes.length === 0 ? (
         <p>No favourite memes...</p>
       ) : (
-        favouriteMemes.map((meme, index) => (
-          <div key={index}>
-            <h2>{meme.title}</h2>
-            <img src={meme.img} alt={meme.title} />
-          </div>
-        ))
+        <div>
+        <MemeComponent
+          memes={favouriteMemes}
+          handleUpvote={handleUpvote}
+          handleDownvote={handleDownvote}
+          toggleFavourite={toggleFavourite}
+        />
+      </div>
       )}
     </div>
   );
