@@ -1,19 +1,40 @@
 import { useSelector } from "react-redux";
-import "../Styles/Aside.css"
+import { Link } from "react-router";
+import { useState } from "react";
+import "../Styles/Aside.css";
 
 export function FavouritesBar() {
-  const memes = useSelector((state) => state.memes)
+  const memes = useSelector((state) => state.memes);
   const favouriteMemes = memes.filter((meme) => meme.isFavourite);
+  const [selectedMeme, setSelectedMeme] = useState(null);
 
   return (
     <div className="favourites-bar">
       <h3>Ulubione: ({favouriteMemes.length})</h3>
       <div className="favourite-thumbnails">
         {favouriteMemes.map((meme, i) => (
-          <img src={meme.img} alt="mini" key={meme.id} />
+          <img
+            src={meme.img}
+            alt="mini"
+            key={meme.id}
+            onClick={() => setSelectedMeme(meme)}
+          />
         ))}
       </div>
-      <a href="/favourites">See all</a>
+      <Link to="/favourites">See all</Link>
+
+      {selectedMeme && (
+        <div className="large-meme" onClick={() => setSelectedMeme(null)}>
+          <div
+            className="large-meme-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2>{selectedMeme.title}</h2>
+            <img src={selectedMeme.img} alt={selectedMeme.title} />
+            <button onClick={() => setSelectedMeme(null)}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
