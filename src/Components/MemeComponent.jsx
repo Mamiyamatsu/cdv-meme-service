@@ -7,27 +7,27 @@ export function MemeComponent({ memes, handleUpvote, handleDownvote, toggleFavou
 
   return (
     <div>
-      {memes.map((meme, index) => (
-        <div key={index} className="meme">
+      {memes.map((meme) => (
+        <div key={meme.id} className="meme">
           <h2>{meme.title}</h2>
           <img src={meme.img} alt={meme.title} />
           <div className="buttons">
             <div>
               <UpvoteComponent
                 count={meme.upvotes}
-                onClick={() => handleUpvote(index)}
+                onClick={() => handleUpvote(meme.id)}
               />
             </div>
             <div>
               <DownvoteComponent
                 count={meme.downvotes}
-                onClick={() => handleDownvote(index)}
+                onClick={() => handleDownvote(meme.id)}
               />
             </div>
             <div>
               <FavouritesComponent
                 isFavourite={meme.isFavourite}
-                onClick={() => toggleFavourite(index)}
+                onClick={() => toggleFavourite(meme.id)}
               />
             </div>
           </div>

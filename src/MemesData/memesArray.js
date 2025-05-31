@@ -5,6 +5,7 @@ import meme4 from "../MemesData/MemesImg/meme4.jpg";
 
 const memesArray = [
   {
+    id: 1,
     title: "When a programmer is born... there will be signs",
     upvotes: 4,
     downvotes: 0,
@@ -12,6 +13,7 @@ const memesArray = [
     isFavourite: false,
   },
   {
+    id: 2,
     title: "Feelings of power",
     upvotes: 3,
     downvotes: 1,
@@ -19,6 +21,7 @@ const memesArray = [
     isFavourite: false,
   },
   {
+    id: 3,
     title: "Programmers' priority",
     upvotes: 10,
     downvotes: 2,
@@ -26,6 +29,7 @@ const memesArray = [
     isFavourite: false,
   },
   {
+    id: 4,
     title: "Happy coding!",
     upvotes: 12,
     downvotes: 3,

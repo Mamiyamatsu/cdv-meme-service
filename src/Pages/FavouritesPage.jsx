@@ -1,8 +1,12 @@
-import { useMemes } from "../Context/MemeContext";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleFavourite, upvoteMeme, downvoteMeme } from "../store/memesReducer";
 import { MemeComponent } from "../Components/MemeComponent";
 
 export function FavouritesPage() {
-  const { memes, handleUpvote, handleDownvote, toggleFavourite } = useMemes();
+  const memes = useSelector((state) => state.memes);
+  const dispatch = useDispatch();
+
+  
   const favouriteMemes = memes.filter((meme) => meme.isFavourite);
 
   return (
@@ -12,12 +16,12 @@ export function FavouritesPage() {
         <p>No favourite memes...</p>
       ) : (
         <div>
-        <MemeComponent
-          memes={favouriteMemes}
-          handleUpvote={handleUpvote}
-          handleDownvote={handleDownvote}
-          toggleFavourite={toggleFavourite}
-        />
+       <MemeComponent
+        memes={favouriteMemes}
+        handleUpvote={(id) => dispatch(upvoteMeme(id))}
+        handleDownvote={(id) => dispatch(downvoteMeme(id))}
+        toggleFavourite={(id) => dispatch(toggleFavourite(id))}
+      />
       </div>
       )}
     </div>

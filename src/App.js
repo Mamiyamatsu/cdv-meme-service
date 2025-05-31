@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import { MemeProvider } from "./Context/MemeContext";
 import { RegularPage } from "./Pages/RegularPage";
 import { HotPage } from "./Pages/HotPage";
 import { WaitingRoomPage } from "./Pages/WaitingRoomPage";
@@ -13,10 +12,9 @@ import { FavouritesBar } from "./Components/FavouritesBar";
 function App() {
   return (
     <div className="App">
-      <MemeProvider>
-        <BrowserRouter>
-          <Navigation />
-          <div className="container">
+      <BrowserRouter>
+        <Navigation />
+        <div className="container">
           <main className="main">
             <Routes>
               <Route path="/" element={<RegularPage />}></Route>
@@ -30,9 +28,8 @@ function App() {
             <FavouritesBar />
             <AdsComponent />
           </aside>
-          </div>
-        </BrowserRouter>
-      </MemeProvider>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
