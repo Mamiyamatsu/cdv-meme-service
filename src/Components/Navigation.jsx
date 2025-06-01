@@ -7,6 +7,7 @@ export function Navigation() {
             <li><NavLink to="/">Główna</NavLink></li>
             <li><NavLink to="/hot">Hot</NavLink></li>
             <li><NavLink to="/poczekalnia">Poczekalnia</NavLink></li>
+            <li><NavLink to="/dodaj">Dodaj</NavLink></li>
             <li><NavLink to="/favourites">Favourites</NavLink></li>
         </ul>
     </nav>

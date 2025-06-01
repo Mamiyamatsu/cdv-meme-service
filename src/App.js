@@ -8,6 +8,7 @@ import { AdsComponent } from "./Components/AdsComponent";
 import "./App.css";
 import { FavouritesPage } from "./Pages/FavouritesPage";
 import { FavouritesBar } from "./Components/FavouritesBar";
+import { MemeFormPage } from "./Pages/MemeFormPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path="/hot" element={<HotPage />}></Route>
               <Route path="/poczekalnia" element={<WaitingRoomPage />}></Route>
               <Route path="/favourites" element={<FavouritesPage />}></Route>
+              <Route path="/dodaj" element={<MemeFormPage />}></Route>
               <Route path="/*" element={<ErrorPage />}></Route>
             </Routes>
           </main>
