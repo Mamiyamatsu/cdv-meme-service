@@ -45,3 +45,11 @@
   max-width: 100%;
   height: auto;
 }
+
+.meme-title {
+  background-color: rgba(0, 0, 0, 0.658); 
+  color: white; 
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: inline-block;
+}

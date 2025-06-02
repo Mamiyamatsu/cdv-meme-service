@@ -9,7 +9,7 @@ export function MemeComponent({ memes, handleUpvote, handleDownvote, toggleFavou
     <div>
       {memes.map((meme) => (
         <div key={meme.id} className="meme">
-          <h2>{meme.title}</h2>
+          <h2 className="meme-title">{meme.title}</h2>
           <img src={meme.img} alt={meme.title} />
           <div className="buttons">
             <div>
