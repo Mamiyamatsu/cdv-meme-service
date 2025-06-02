@@ -1,15 +1,19 @@
+import { Heart, Hourglass, Plus } from "lucide-react";
 import { NavLink } from "react-router";
+import "../Styles/Navigation.css";
 
 export function Navigation() {
     return (
-    <nav className='navigation'>
-        <ul>
-            <li><NavLink to="/">Główna</NavLink></li>
-            <li><NavLink to="/hot">Hot</NavLink></li>
-            <li><NavLink to="/poczekalnia">Poczekalnia</NavLink></li>
-            <li><NavLink to="/dodaj">Dodaj</NavLink></li>
-            <li><NavLink to="/favourites">Favourites</NavLink></li>
-        </ul>
+    <nav className='site-nav'>
+        <div className='site-nav-content'>
+            <NavLink to="/" className={({isActive}) => isActive ? 'site-active page-main-active' : 'site-nav-link'}>GŁÓWNA</NavLink>
+            <NavLink to="/hot" className={({isActive}) => isActive ? 'site-active page-hot-active' : 'site-nav-link'}>HOT</NavLink>
+            <div className="site-portal-name">BOOMERZY.PL</div>
+            <NavLink to="/poczekalnia" className={({isActive}) => isActive ? 'site-active page-waiting-active' : 'site-nav-link'}><Hourglass size={20} /></NavLink>
+            <NavLink to="/dodaj" className={({isActive}) => isActive ? 'site-active page-add-active' : 'site-nav-link'}><Plus size={20} /></NavLink>
+            <NavLink to="/favourites" className={({isActive}) => isActive ? 'site-active page-fav-active' : 'site-nav-link'}><Heart size={20} /></NavLink>
+        
+        </div>
     </nav>
     );
 }
