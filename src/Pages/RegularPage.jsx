@@ -7,7 +7,7 @@ export function RegularPage() {
   const dispatch = useDispatch();
 
 
-  const regularMemes = memes.filter((meme) => meme.upvotes < 10);
+  const regularMemes = memes.filter((meme) => meme.upvotes > 2 && meme.upvotes < 10);
 
   return (
     <div>

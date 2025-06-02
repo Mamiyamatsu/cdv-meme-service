@@ -21,7 +21,7 @@ export function MemeFormPage() {
     };
 
     dispatch(addMeme(newMeme));
-    navigate("/");
+    navigate("/poczekalnia");
   };
 
   return (
