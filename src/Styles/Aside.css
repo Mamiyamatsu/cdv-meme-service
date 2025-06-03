@@ -3,6 +3,10 @@
   margin-left: 10px;
   margin-top: 20px;
 }
+
+.aside div {
+  margin-bottom: 10px;
+}
 .aside img {
   max-width: 90%;
   height: auto;
@@ -10,10 +14,10 @@
 .favourite-thumbnails img {
   max-height: 50px;
   max-width: auto;
+  cursor: pointer;
 }
 
 .thumbnail {
-  cursor: pointer;
   transition: transform 0.2s;
 }
 .thumbnail:hover {
@@ -33,7 +37,7 @@
   z-index: 1000;
 }
 .large-meme-content {
-  background: white;
+  background: rgba(255, 255, 255, 0.721);
   padding: 20px;
   max-width: 90%;
   max-height: 90%;
@@ -44,11 +48,25 @@
 .large-meme-content img {
   max-width: 100%;
   height: auto;
+  padding-bottom: 8px;
+}
+.large-meme-content button {
+  display: block;
+  margin: 0 auto;
 }
 
+
 .meme-title {
-  background-color: rgba(0, 0, 0, 0.658); 
-  color: white; 
+  background-color: rgba(0, 0, 0, 0.658);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.favourites-bar h3 {
+  background-color: rgba(0, 0, 0, 0.658);
+  color: white;
   padding: 8px 12px;
   border-radius: 4px;
   display: inline-block;
