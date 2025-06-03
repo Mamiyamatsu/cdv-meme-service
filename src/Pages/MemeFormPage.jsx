@@ -11,7 +11,7 @@ export function MemeFormPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     const newMeme = {
       title,
       img: URL.createObjectURL(image),
@@ -34,6 +34,7 @@ export function MemeFormPage() {
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            placeholder="Wpisz tytuł mema"
             required
           />
         </div>
@@ -50,4 +51,4 @@ export function MemeFormPage() {
       </form>
     </div>
   );
-};
+}
