@@ -11,9 +11,8 @@ export function FavouritesPage() {
 
   return (
     <div>
-      <h1>Favourite memes</h1>
       {favouriteMemes.length === 0 ? (
-        <p>No favourite memes...</p>
+        <p><b>Nie masz ulubionych memów...</b></p>
       ) : (
         <div>
        <MemeComponent

@@ -21,7 +21,7 @@ export function FavouritesBar() {
           />
         ))}
       </div>
-      <Link to="/favourites">See all</Link>
+      <Link to="/favourites"><button>Zobacz wszystkie</button></Link>
 
       {selectedMeme && (
         <div className="large-meme" onClick={() => setSelectedMeme(null)}>

@@ -1,3 +1,3 @@
 export function ErrorPage() {
-    return <h1>Error Page</h1>
+    return <h1>Zabłądziłeś!</h1>
 }
