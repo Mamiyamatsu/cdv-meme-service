@@ -18,7 +18,7 @@ Nowe memy trafiają automatycznie do Poczekalni.
 3. Interakcje z memami
 Pod każdym memem znajdziesz przyciski:
 👍 Like – zwiększa liczbę łapek w górę.
-👎 Dislike – zwiększa liczbę łapek w górę.
+👎 Dislike – zwiększa liczbę łapek w dół.
 ⭐ Favourite – dodaje/usuwa mema z ulubionych.
 
 4. Ulubione (⭐)
