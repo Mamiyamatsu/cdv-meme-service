@@ -7,7 +7,6 @@ Podstawowe funkcje
 Memy z 3–9 łapkami w górę.
 🔥 Hot
 Memy z 10+ łapkami w górę.
-Memy z 10+ łapkami w dół spadną z hotów.
 ⏳ Poczekalnia
 Nowe memy (od 0 do 2 łapek).
 Jeśli mem zdobędzie 3 łapki, trafia do Regular.
@@ -18,8 +17,8 @@ Nowe memy trafiają automatycznie do Poczekalni.
 
 3. Interakcje z memami
 Pod każdym memem znajdziesz przyciski:
-👍 Like – zwiększa liczbę łapek.
-👎 Dislike – zmniejsza liczbę łapek.
+👍 Like – zwiększa liczbę łapek w górę.
+👎 Dislike – zwiększa liczbę łapek w górę.
 ⭐ Favourite – dodaje/usuwa mema z ulubionych.
 
 4. Ulubione (⭐)
@@ -35,6 +34,6 @@ Kliknięcie przekierowuje na przykładową domenę.
 
 Jak korzystać?
 Przeglądaj memy w sekcjach: Poczekalnia, Regular, Hot.
-Głosuj (👍/👎), aby przenieść memy między sekcjami.
+Głosuj (👍), aby przenieść memy między sekcjami.
 Dodawaj własne memy (➕), aby rozpocząć ich "podróż" od Poczekalni.
 Oznaczaj ulubione (⭐), aby śledzić najlepsze treści.
