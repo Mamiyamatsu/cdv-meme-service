@@ -6,10 +6,10 @@ export function FavouritesComponent({ isFavourite, onClick }) {
     <button
       onClick={onClick}
       className={`btn favourite-btn ${isFavourite ? "favourite" : ""}`}
-      title={isFavourite ? "Remove from favourites" : "Add to favourites"}
+      title={isFavourite ? "Usuń z ulubionych" : "Dodaj do ulubionych"}
     >
       <Star className="favourite-icon" size={20} />
-      <span>{isFavourite ? "Favourite" : "Add"}</span>
+      <span>{isFavourite ? "Ulubione" : "Dodaj"}</span>
     </button>
   );
 }
