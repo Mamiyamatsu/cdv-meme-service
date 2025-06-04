@@ -6,7 +6,7 @@ export function HotPage() {
   const memes = useSelector((state) => state.memes);
   const dispatch = useDispatch();
 
-  const hotMemes = memes.filter((meme) => meme.upvotes >= 10 && meme.downvotes < 10);
+  const hotMemes = memes.filter((meme) => meme.upvotes >= 10);
 
   return (
     <div>
