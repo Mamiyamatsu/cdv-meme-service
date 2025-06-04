@@ -31,7 +31,7 @@ export function FavouritesBar() {
           >
             <h2>{selectedMeme.title}</h2>
             <img src={selectedMeme.img} alt={selectedMeme.title} />
-            <button onClick={() => setSelectedMeme(null)}>Close</button>
+            <button onClick={() => setSelectedMeme(null)}>Zamknij</button>
           </div>
         </div>
       )}
