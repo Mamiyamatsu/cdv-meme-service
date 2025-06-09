@@ -42,20 +42,15 @@ export const memesReducer = (state = initialState, action) => {
         ),
       };
 
-    case ADD_MEME:
-      return {
-        ...state,
-        memes: [
-          ...state.memes,
-          {
-            ...action.payload,
-            id:
-              state.memes.length > 0
-                ? Math.max(...state.memes.map((meme) => meme.id)) + 1
-                : 1,
-          },
-        ],
-      };
+      case ADD_MEME:
+        return {
+          ...state,
+          memes: [
+            ...state.memes,
+            action.payload,
+          ],
+        };
+
     default:
       return state;
   }
