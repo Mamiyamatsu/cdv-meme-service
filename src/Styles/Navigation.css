@@ -19,11 +19,13 @@
   flex-wrap: wrap;
 }
 
-.site-nav-link,
-.site-nav-link.active {
+.site-nav-content a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: #2f2f2f;
+  font-weight: 600;
+  font-size: 18px;
   padding: 10px 20px;
   border-radius: 50px;
   min-width: 80px;
@@ -33,46 +35,44 @@
   transition: 0.2s;
 }
 
-.site-nav-link {
-  color: #2f2f2f;
-  font-weight: 600;
-  font-size: 18px;
-  border: none;
-}
-
-.site-nav-link.active {
+.site-nav-content a.active {
   font-weight: 700;
   border: 3px solid;
 }
 
-.site-nav-link.active[href="/"] {
+.page-main.active {
   color: #006600;
   border-color: #006600;
   background-color: rgba(0, 200, 0, 0.15);
 }
 
-.site-nav-link.active[href="/hot"] {
+.page-hot.active {
   color: #cc0000;
   border-color: #cc0000;
   background-color: rgba(255, 0, 0, 0.15);
 }
 
-.site-nav-link.active[href="/poczekalnia"] {
+.page-waiting.active {
   color: #d308bf;
   border-color: #d308bf;
   background-color: rgba(255, 0, 225, 0.15);
 }
 
-.site-nav-link.active[href="/dodaj"] {
+.page-add.active {
   color: #0000cc;
   border-color: #0000cc;
   background-color: rgba(0, 100, 255, 0.15);
 }
 
-.site-nav-link.active[href="/favourites"] {
+.page-fav.active {
   color: #bc9412;
   border-color: #bc9412;
   background-color: rgba(251, 255, 0, 0.15);
+}
+
+.site-nav-content a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .site-portal-name {
