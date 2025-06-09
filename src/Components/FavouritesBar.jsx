@@ -8,6 +8,9 @@ export function FavouritesBar() {
   const favouriteMemes = memes.filter((meme) => meme.isFavourite);
   const [selectedMeme, setSelectedMeme] = useState(null);
 
+  const showBigMeme = (meme) => setSelectedMeme(meme);
+  const hideBigMeme = () => setSelectedMeme(null);
+
   return (
     <div className="favourites-bar">
       <h3>Ulubione: ({favouriteMemes.length})</h3>
@@ -17,21 +20,23 @@ export function FavouritesBar() {
             src={meme.img}
             alt="mini"
             key={meme.id}
-            onClick={() => setSelectedMeme(meme)}
+            onClick={() => showBigMeme(meme)}
           />
         ))}
       </div>
-      <Link to="/favourites"><button>Zobacz wszystkie</button></Link>
+      <Link to="/favourites">
+        <button>Zobacz wszystkie</button>
+      </Link>
 
       {selectedMeme && (
-        <div className="large-meme" onClick={() => setSelectedMeme(null)}>
+        <div className="large-meme" onClick={hideBigMeme}>
           <div
             className="large-meme-content"
             onClick={(e) => e.stopPropagation()}
           >
             <h2>{selectedMeme.title}</h2>
             <img src={selectedMeme.img} alt={selectedMeme.title} />
-            <button onClick={() => setSelectedMeme(null)}>Zamknij</button>
+            <button onClick={hideBigMeme}>Zamknij</button>
           </div>
         </div>
       )}
