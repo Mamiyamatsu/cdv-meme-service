@@ -12,24 +12,18 @@ export function MemeComponent({ memes, handleUpvote, handleDownvote, toggleFavou
           <h2 className="meme-title">{meme.title}</h2>
           <img src={meme.img} alt={meme.title} />
           <div className="buttons">
-            <div>
               <UpvoteComponent
                 count={meme.upvotes}
                 onClick={() => handleUpvote(meme.id)}
               />
-            </div>
-            <div>
               <DownvoteComponent
                 count={meme.downvotes}
                 onClick={() => handleDownvote(meme.id)}
               />
-            </div>
-            <div>
               <FavouritesComponent
                 isFavourite={meme.isFavourite}
                 onClick={() => toggleFavourite(meme.id)}
               />
-            </div>
           </div>
         </div>
       ))}
