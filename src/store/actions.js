@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 export const TOGGLE_FAVOURITE = "TOGGLE_FAVOURITE";
 export const UPVOTE_MEME = "UPVOTE_MEME";
 export const DOWNVOTE_MEME = "DOWNVOTE_MEME";
@@ -18,8 +20,10 @@ export const downvoteMeme = (id) => ({
   payload: id,
 });
 
-
 export const addMeme = (newMeme) => ({
   type: ADD_MEME,
-  payload: newMeme,
+  payload: {
+    ...newMeme,
+    id: uuidv4(),
+  },
 });
