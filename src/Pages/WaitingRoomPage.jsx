@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { toggleFavourite, upvoteMeme, downvoteMeme } from "../store/memesReducer";
+import { toggleFavourite, upvoteMeme, downvoteMeme } from "../store/actions";
 import { MemeComponent } from "../Components/MemeComponent";
 
 export function WaitingRoomPage() {

@@ -1,33 +1,14 @@
 import memesArray from "../MemesData/memesArray";
-
-const TOGGLE_FAVOURITE = "TOGGLE_FAVOURITE";
-const UPVOTE_MEME = "UPVOTE_MEME";
-const DOWNVOTE_MEME = "DOWNVOTE_MEME";
-const ADD_MEME = "ADD_MEME";
-
-export const toggleFavourite = (id) => ({
-  type: TOGGLE_FAVOURITE,
-  payload: id,
-});
-
-export const upvoteMeme = (id) => ({
-  type: UPVOTE_MEME,
-  payload: id,
-});
-
-export const downvoteMeme = (id) => ({
-  type: DOWNVOTE_MEME,
-  payload: id,
-});
+import {
+  TOGGLE_FAVOURITE,
+  UPVOTE_MEME,
+  DOWNVOTE_MEME,
+  ADD_MEME,
+} from "./actions";
 
 const initialState = {
   memes: memesArray,
 };
-
-export const addMeme = (newMeme) => ({
-  type: ADD_MEME,
-  payload: newMeme,
-});
 
 export const memesReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -61,16 +42,20 @@ export const memesReducer = (state = initialState, action) => {
         ),
       };
 
-      case ADD_MEME:
-        return {
-          ...state,
-          memes: [...state.memes, {
+    case ADD_MEME:
+      return {
+        ...state,
+        memes: [
+          ...state.memes,
+          {
             ...action.payload,
-            id: state.memes.length > 0 
-              ? Math.max(...state.memes.map(meme => meme.id)) + 1 
-              : 1
-          }],
-        };
+            id:
+              state.memes.length > 0
+                ? Math.max(...state.memes.map((meme) => meme.id)) + 1
+                : 1,
+          },
+        ],
+      };
     default:
       return state;
   }
