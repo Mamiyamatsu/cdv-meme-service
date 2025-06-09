@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { MemeComponent } from "../Components/MemeComponent";
-import { toggleFavourite, upvoteMeme, downvoteMeme } from "../store/memesReducer";
+import { toggleFavourite, upvoteMeme, downvoteMeme } from "../store/actions";
 
 export function HotPage() {
   const memes = useSelector((state) => state.memes);

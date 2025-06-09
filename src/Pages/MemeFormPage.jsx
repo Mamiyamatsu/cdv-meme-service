@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addMeme } from "../store/memesReducer";
+import { addMeme } from "../store/actions";
 import { useNavigate } from "react-router";
 
 export function MemeFormPage() {
