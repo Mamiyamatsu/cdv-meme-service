@@ -27,8 +27,8 @@ function App() {
             </Routes>
           </main>
           <aside className="aside">
-            <div><FavouritesBar /></div>
-            <div><AdsComponent /></div>
+            <FavouritesBar />
+            <AdsComponent />
           </aside>
         </div>
       </BrowserRouter>
