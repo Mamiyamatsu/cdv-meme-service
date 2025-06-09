@@ -76,14 +76,6 @@
 }
 
 .site-portal-name {
-  font-size: 30px;
-  font-weight: bold;
-  margin: 0 30px;
-  color: #262626;
-  flex-shrink: 0;
-}
-
-.site-portal-name {
   font-size: 24px;
   font-weight: bold;
   margin: 0 30px;
